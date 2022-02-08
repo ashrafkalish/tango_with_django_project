@@ -3,7 +3,6 @@ from django.db import models
 from django.template.defaultfilters import slugify
 from django.contrib import admin
 
-
 # Create your models here.
 class Category(models.Model):
     name= models.CharField(max_length=128, unique=True)
@@ -15,7 +14,7 @@ class Category(models.Model):
         super(Category, self).save(*args, **kwargs)
     class Meta:
         verbose_name_plural='categories'
-       # verbose_name_plural='pages'
+       
 
     def __str__(self):
         return self.name
